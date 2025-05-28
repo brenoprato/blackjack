@@ -6,7 +6,7 @@ typedef struct{
     char *suit;
 }card;
 
-void new_baralho();
+void new_baralho(card *baralho);
 void shuffle();
 void give_card();
 int hand_value();
