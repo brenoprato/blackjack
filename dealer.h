@@ -1,6 +1,10 @@
 #ifndef DEALER_H
 #define DEALER_H
 
+#define NUM_VALUES 13
+#define NUM_SUITS 4
+#define NUM_CARDS (NUM_SUITS * NUM_VALUES)
+
 typedef struct{
     char *value;
     char *suit;
