@@ -16,7 +16,7 @@ void new_baralho(card *baralho){
         for (int j = 0; j < NUM_SUITS; j++){ //passa por cada naipe
             baralho[posicao].value = values[i];
             baralho[posicao].suit = suits[j];
-            posicao++;
+            posicao++; //proxima carta
         }
     }
 }
