@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "dealer.h"
 
 const char *values[NUM_VALUES] = {"A","2","3","4","5","6","7","8","9","T","J","Q","K"};
@@ -15,4 +17,19 @@ void new_baralho(card *baralho){
             posicao++; //proxima carta
         }
     }
+}
+
+void shuffle (card *baralho){
+
+    srand(time(NULL));
+
+    for (int i = NUM_CARDS - 1; i > 0; i--){
+        int j = rand()%(i+1);
+
+        card temp = baralho[i];
+        baralho[i] = baralho[j];
+        baralho[j] = temp;
+    }
+
+
 }

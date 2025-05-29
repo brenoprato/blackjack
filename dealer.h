@@ -11,8 +11,8 @@ typedef struct{
 }card;
 
 void new_baralho(card *baralho);
-void shuffle();
-void give_card();
-int hand_value();
+void shuffle(card *baralho);
+void give_card(card *baralho);
+int hand_value(card *baralho);
 
 #endif
