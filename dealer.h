@@ -13,6 +13,7 @@ typedef struct{
 void new_baralho(card *baralho);
 void shuffle(card *baralho);
 void add_card(card *hand, int *n_cards, card*baralho, int*n_baralho);
-int hand_value(card *hand, int *n_cards);
+int hand_value(card *hand, int *n_cards, int hide_card);
+void print_hand(card *hand, int *n_cards, int hide_card);
 
 #endif

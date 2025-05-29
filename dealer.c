@@ -45,29 +45,44 @@ void add_card(card *hand, int *n_cards, card *baralho, int *n_baralho) {
     (*n_baralho)++; 
 }
 
-int hand_value(card *hand, int *n_cards) {
+int hand_value(card *hand, int *n_cards, int hide_card) {
     int value = 0;
     int aces = 0;
 
     for (int i = 0; i < *n_cards; i++) {
         char *v = hand[i].value;
 
-        if (strcmp(v, "A") == 0) {
-            value += 11;
-            aces++;
-        } else if (strcmp(v, "K") == 0 || strcmp(v, "Q") == 0 || strcmp(v, "J") == 0 || strcmp(v, "T") == 0) {
-            value += 10;
-        } else {
-            value += atoi(v);
+        if (i == 1 && hide_card == 1){
+            break;
+        }else{
+            if (strcmp(v, "A") == 0) {
+                value += 11;
+                aces++;
+            } else if (strcmp(v, "K") == 0 || strcmp(v, "Q") == 0 || strcmp(v, "J") == 0 || strcmp(v, "T") == 0) {
+                value += 10;
+            } else {
+                value += atoi(v);
+            }
         }
-    }
 
-    // Trata o Ás como 1 se estourar 21
-    while (value > 21 && aces > 0) {
-        value -= 10;
-        aces--;
-    }
+        while (value > 21 && aces > 0) {
+            value -= 10;
+            aces--;
+        }
+        }
+            
 
     return value;
+}
+
+void print_hand(card*hand, int *n_cards, int hide_card){
+   for (int i = 0; i < *n_cards; i++) {
+        if (i == 1 && hide_card) {
+            printf("[??] ");
+        } else {
+            printf("[%s%s] ", hand[i].value, hand[i].suit);
+        }
+    }
+    printf("\n");
 }
 
