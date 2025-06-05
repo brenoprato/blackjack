@@ -37,8 +37,6 @@ Neste projeto foram aplicados diversos conceitos importantes da linguagem C, com
 
 ---
 
-OBS: player.c e player.h, futuramente terao funcionalidades, como bets e saldo.
-
 ## ⚙️ Como compilar e executar
 
 1. Compile com:

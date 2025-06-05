@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "dealer.h"
-#include "player.h"
 #include "utils.h"
 
 int main(){
@@ -79,7 +78,7 @@ int main(){
                 play = 0;
             }
              if (value_player > 21){
-                printf("Voce stourou a mao, perdeu\n");
+                printf("Voce estourou a mao, perdeu\n");
                 play = 0;
             }
         }while(play == 1);
@@ -119,7 +118,7 @@ int main(){
             }else if(value_dealer == value_player){
                 printf ("Empate\n");
             }else {
-                printf ("Voce ganhou");
+                printf ("Voce ganhou\n");
             }
         }
 
