@@ -116,8 +116,10 @@ int main(){
                 printf ("Dealer estourou a mao, voce ganhou!\n");
             }else if(value_dealer > value_player){
                 printf ("Dealer ganhou\n");
-            }else{
-                printf ("Voce ganhou!\n");
+            }else if(value_dealer == value_player){
+                printf ("Empate\n");
+            }else {
+                printf ("Voce ganhou");
             }
         }
 
