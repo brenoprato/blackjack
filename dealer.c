@@ -6,7 +6,7 @@
 
 const char *values[NUM_VALUES] = {"A","2","3","4","5","6","7","8","9","T","J","Q","K"};
 
-const char *suits[NUM_SUITS] = {"[C]", "[H]", "[S]", "[D]"}; //♣ ♥ ♠ ♦
+const char *suits[NUM_SUITS] = {"♣", "♥", "♠", "♦"}; //♣ ♥ ♠ ♦
 
 void new_baralho(card *baralho){
 
